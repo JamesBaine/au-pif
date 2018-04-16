@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/JamesBaine/au-pif/issues"
   },
-  "homepage": "https://github.com/JamesBaine/au-pif#readme"
+  "homepage": "https://github.com/JamesBaine/au-pif#readme",
+  "devDependencies": {
+    "webpack": "^4.5.0"
+  },
+  "dependencies": {}
 }
