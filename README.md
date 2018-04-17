@@ -1,2 +1,2 @@
-# au-pif
+# fork-Q
 Recipe / Shopping list generating application
