@@ -1,6 +1,6 @@
 import { elements } from './base';
 
-export default renderItem = item => {
+export const renderItem = item => {
     const markup = `
         <li class="shopping__item" data-itemid=${item.id}>
             <div class="shopping__count">
@@ -15,10 +15,10 @@ export default renderItem = item => {
             </button>
         </li>
     `;
-    elements.shopping.insertAdjacentElement('beforeend', markup);
+    elements.shopping.insertAdjacentHTML('beforeend', markup);
 };
 
 export const deleteItem = id => {
     const item = document.querySelector(`[data-itemid="${id}"]`);
-    item.parentElement.removeChild(item);
+    if (item) item.parentElement.removeChild(item);
 };
