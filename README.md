@@ -1,4 +1,4 @@
-<img src="dist/img/logo.png" alt="fork-q" width="200">
+<img src="dist/img/logo.png" alt="fork-q" width="150">
 Recipe / Shopping list generating application
 
 
