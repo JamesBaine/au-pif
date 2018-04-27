@@ -1,4 +1,4 @@
-![fork-Q](dist/img/logo.png)
+![fork-Q](dist/img/logo.png =250x250)
 Recipe / Shopping list generating application
 
 
