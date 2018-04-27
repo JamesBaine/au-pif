@@ -1,4 +1,4 @@
-# fork-Q
+![fork-Q](dist/img/logo.png)
 Recipe / Shopping list generating application
 
 
