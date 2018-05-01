@@ -1,6 +1,7 @@
 <img src="dist/img/logo.png" alt="fork-q" width="150">
 Recipe / Shopping list generating application
-[Use app](https://jamesbaine.github.io/fork-q/dist/index.html/)
+
+[Use app](https://jamesbaine.github.io/fork-q/dist/index.html)
 
 Ways to improve: 
 
