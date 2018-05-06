@@ -6,7 +6,14 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "webpack-dev-server --mode development --open",
+    "watch:sass": "node-sass sass/main.scss dist/css/style.css -w",
+    "devserver": "live-server",
+    "sass:start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss dist/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/css/style.comp.css -o dist/css/style.prefix.css",
+    "compress:css": "node-sass dist/css/style.prefix.css dist/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "repository": {
     "type": "git",
