@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JamesBaine/au-pif.git"
+    "url": "git+https://github.com/JamesBaine/fork-q.git"
   },
   "author": "James Baine",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JamesBaine/au-pif/issues"
+    "url": "https://github.com/JamesBaine/fork-q/issues"
   },
-  "homepage": "https://github.com/JamesBaine/au-pif#readme",
+  "homepage": "https://github.com/JamesBaine/fork-q#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
