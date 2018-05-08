@@ -6,14 +6,8 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open",
-    "watch:sass": "node-sass sass/main.scss dist/css/style.css -w",
-    "devserver": "live-server",
-    "sass:start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass sass/main.scss dist/css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/css/style.comp.css -o dist/css/style.prefix.css",
-    "compress:css": "node-sass dist/css/style.prefix.css dist/css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "build:prod": "webpack -p",
+    "start": "webpack-dev-server --mode development --open"
   },
   "repository": {
     "type": "git",
@@ -30,8 +24,12 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.19",
     "concat": "^1.0.3",
     "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.9.0",
     "npm-run-all": "^4.1.2",
