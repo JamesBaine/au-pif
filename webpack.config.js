@@ -1,27 +1,20 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin'); 
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-
-const extractPlugin = new ExtractTextPlugin('css/main.css');
 
 module.exports = {
-    entry: ['babel-polyfill','./src/js/index.js'],
+    entry: ['babel-polyfill', './src/js/index.js'],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/bundle.js',
-        // publicPath: '/dist'
+        filename: 'js/bundle.js'
     },
     devServer: {
         contentBase: './dist'
     },
-    plugins: [ 
+    plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './src/index.html',
-        }),
-        extractPlugin,
-        new CleanWebpackPlugin(['dist'])
+            template: './src/index.html'
+        })
     ],
     module: {
         rules: [
@@ -29,30 +22,18 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader'
+                    loader: 'babel-loader',
                 }
             },
             {
                 test: /\.scss$/,
-                use: extractPlugin.extract({
-                    use: ['css-loader', 'sass-loader']
-                })
-            },
-            {
-                test: /\.html$/,
-                use: ['html-loader']
-            },
-            {
-                test: /\.(jpg|png|svg)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'img/'
-                        }
-                    }
-                ]
+                use: [{
+                    loader: 'style-loader'
+                }, {
+                    loader: 'css-loader'
+                }, {
+                    loader: 'sass-loader'
+                }]
             }
         ]
     }
